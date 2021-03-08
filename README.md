@@ -1,6 +1,7 @@
 # VRUguiSample
-VRUguiSample  
-Horizontal menu  
+## VRUguiSample  
+### Drag  
+ - Horizontal menu  
 <img src="https://github.com/shinn716/VRUguiSample/blob/main/gif/drag01.gif" /></a>    
-Vertical menu  
+ - Vertical menu  
 <img src="https://github.com/shinn716/VRUguiSample/blob/main/gif/drag02.gif" /></a>  
