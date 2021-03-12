@@ -68,7 +68,7 @@ public class BtDrag : MonoBehaviour,
     {
         if (!boolDraggable)
             return;
-        m_transformMainObj.GetComponent<RectTransform>().position = Standalone_Controller.instance.sprDot.transform.position;
+        m_transformMainObj.GetComponent<RectTransform>().position = Standalone_Controller.instance.sprDot.transform.position + new Vector3(.25f, 0, 0);
     }
     public void OnEndDrag(PointerEventData eventData)
     {
