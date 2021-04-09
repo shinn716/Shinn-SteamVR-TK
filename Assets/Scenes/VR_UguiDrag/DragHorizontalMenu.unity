@@ -235,6 +235,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2141798362038858464, guid: 481adae066881c74182a66fe6ed72a0f,
         type: 3}
       propertyPath: m_Text
@@ -445,6 +455,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2141798362038858464, guid: 481adae066881c74182a66fe6ed72a0f,
         type: 3}
@@ -672,6 +692,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2141798362038858464, guid: 481adae066881c74182a66fe6ed72a0f,
         type: 3}
       propertyPath: m_Text
@@ -892,6 +922,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2141798362038858464, guid: 481adae066881c74182a66fe6ed72a0f,
         type: 3}
       propertyPath: m_Text
@@ -1021,6 +1061,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2141798362038858464, guid: 481adae066881c74182a66fe6ed72a0f,
         type: 3}
@@ -1217,6 +1267,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 481adae066881c74182a66fe6ed72a0f, type: 3}
@@ -1449,6 +1509,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 978203781604054045, guid: 481adae066881c74182a66fe6ed72a0f,
+        type: 3}
+      propertyPath: offset.y
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2141798362038858464, guid: 481adae066881c74182a66fe6ed72a0f,
         type: 3}

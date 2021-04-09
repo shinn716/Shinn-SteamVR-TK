@@ -14,6 +14,7 @@ public class BtDrag : MonoBehaviour,
     public bool boolDraggable = false;
     public Image imageBg;
     public Transform m_transformMainObj;
+    public Vector3 offset = new Vector3(.25f, 0, 0);
 
     [Space]
     public List<Transform> m_items = new List<Transform>();
@@ -68,7 +69,7 @@ public class BtDrag : MonoBehaviour,
     {
         if (!boolDraggable)
             return;
-        m_transformMainObj.GetComponent<RectTransform>().position = Standalone_Controller.instance.sprDot.transform.position + new Vector3(.25f, 0, 0);
+        m_transformMainObj.GetComponent<RectTransform>().position = Standalone_Controller.instance.sprDot.transform.position + offset;
     }
     public void OnEndDrag(PointerEventData eventData)
     {
@@ -102,7 +103,6 @@ public class BtDrag : MonoBehaviour,
 
         yield return null;
         Destroy(m_goEmpty);
-
     }
 
     private Transform GetClosestObject(Transform[] objs, Vector3 target)
