@@ -12,7 +12,8 @@ public class ColorPick : MonoBehaviour
     
     void Update()
     {
-        SetThumbPosition(Standalone_Controller.instance.sprDot.transform.position);
+        if(Input.GetMouseButton(0))
+            SetThumbPosition(Standalone_Controller.instance.sprDot.transform.position);
     }
 
     private void SetThumbPosition(Vector3 point)
