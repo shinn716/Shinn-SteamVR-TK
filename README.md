@@ -1,4 +1,4 @@
-# VR-UguiUtility
+# VR-Ugui-Utility
 ## Drag  
  - Horizontal menu  
 <img src="https://github.com/shinn716/VRUguiSample/blob/main/gif/drag01.gif" /></a>    
