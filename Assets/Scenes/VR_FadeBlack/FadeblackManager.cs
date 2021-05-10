@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FadebackManager : MonoBehaviour
+public class FadeblackManager : MonoBehaviour
 {
     ScreenFade screenFade;
     // Start is called before the first frame update
