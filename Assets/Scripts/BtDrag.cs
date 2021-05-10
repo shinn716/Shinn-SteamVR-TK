@@ -70,6 +70,10 @@ public class BtDrag : MonoBehaviour,
         if (!boolDraggable)
             return;
         m_transformMainObj.GetComponent<RectTransform>().position = Standalone_Controller.instance.sprDot.transform.position + offset;
+        
+        // insert
+        var target = GetClosestObject(m_items.ToArray(), Standalone_Controller.instance.sprDot.transform.position);
+        m_goEmpty.transform.SetSiblingIndex(target.GetSiblingIndex());
     }
     public void OnEndDrag(PointerEventData eventData)
     {
