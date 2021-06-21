@@ -69,34 +69,38 @@ public class BtDrag : MonoBehaviour,
     {
         if (!boolDraggable)
             return;
-        m_transformMainObj.GetComponent<RectTransform>().position = Standalone_Controller.instance.sprDot.transform.position + offset;
-        
+
+        // Standalone
+        Vector3 hitpoint = Vector3.zero;
+        if (UnityEngine.XR.XRSettings.loadedDeviceName.Equals("None"))
+            hitpoint = Standalone_Controller.instance.sprDot.transform.position + offset;
+        // SteamVR
+        else
+            hitpoint = eventData.pointerCurrentRaycast.worldPosition + offset;
+
+        m_transformMainObj.GetComponent<RectTransform>().position = hitpoint;
+
         // insert
-        var target = GetClosestObject(m_items.ToArray(), Standalone_Controller.instance.sprDot.transform.position);
+        var target = GetClosestObject(m_items.ToArray(), hitpoint);
         m_goEmpty.transform.SetSiblingIndex(target.GetSiblingIndex());
     }
     public void OnEndDrag(PointerEventData eventData)
     {
         if (!boolDraggable)
             return;
-
-        //StartCoroutine(Process());
-
-        var target = GetClosestObject(m_items.ToArray(), Standalone_Controller.instance.sprDot.transform.position);
-        m_targetIndex = target.GetSiblingIndex();
-
-        m_transformMainObj.SetParent(m_itemGroup);
-        m_transformMainObj.SetSiblingIndex(m_targetIndex);
-        m_transformMainObj.GetComponent<RectTransform>().localPosition = Vector3.Scale(m_transformMainObj.GetComponent<RectTransform>().localPosition, new Vector3(1, 1, 0));
-
-        target.SetSiblingIndex(m_currentIndex);
+        
         Destroy(m_goEmpty);
-    }
 
-    private IEnumerator Process()
-    {
-        yield return null;
-        var target = GetClosestObject(m_items.ToArray(), Standalone_Controller.instance.sprDot.transform.position);
+        // Standalone
+        Vector3 hitpoint = Vector3.zero;
+        if (UnityEngine.XR.XRSettings.loadedDeviceName.Equals("None"))
+            hitpoint = Standalone_Controller.instance.sprDot.transform.position + offset;
+        // SteamVR
+        else
+            hitpoint = eventData.pointerCurrentRaycast.worldPosition + offset;
+
+        var target = GetClosestObject(m_items.ToArray(), hitpoint);
+
         m_targetIndex = target.GetSiblingIndex();
 
         m_transformMainObj.SetParent(m_itemGroup);
@@ -104,8 +108,6 @@ public class BtDrag : MonoBehaviour,
         m_transformMainObj.GetComponent<RectTransform>().localPosition = Vector3.Scale(m_transformMainObj.GetComponent<RectTransform>().localPosition, new Vector3(1, 1, 0));
 
         target.SetSiblingIndex(m_currentIndex);
-
-        yield return null;
         Destroy(m_goEmpty);
     }
 

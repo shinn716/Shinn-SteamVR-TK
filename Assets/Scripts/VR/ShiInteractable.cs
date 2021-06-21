@@ -68,7 +68,11 @@ public class ShiInteractable : MonoBehaviour
         m_hightlightGo.GetComponent<Renderer>().allowOcclusionWhenDynamic = false;
 
         m_hightlightGo.GetComponent<Renderer>().material = Resources.Load<Material>("SteamVR_HoverHighlight");
-        m_hightlightGo.transform.SetPositionAndRotation(transform.position, transform.rotation);
+        //m_hightlightGo.transform.SetPositionAndRotation(transform.position, transform.rotation);
+
+        m_hightlightGo.transform.SetParent(transform);
+        m_hightlightGo.transform.localPosition = Vector3.zero;
+        m_hightlightGo.transform.localRotation = Quaternion.identity;
 
         Destroy(m_hightlightGo.GetComponent<ShiInteractable>());
         Destroy(m_hightlightGo.GetComponent<Collider>());

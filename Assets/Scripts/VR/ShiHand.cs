@@ -98,7 +98,7 @@ public class ShiHand : MonoBehaviour
         m_CurrentInteractable.m_ActiveHand = this;
 
         // TODO:
-        // 物件包含 hand physics 功能
+        // 物件包含 Gravity 功能
         //if (!m_CurrentInteractable.GetComponent<Rigidbody>().useGravity)
         //    return;
         //m_CurrentInteractable.GetComponent<Rigidbody>().isKinematic = true;
@@ -110,7 +110,7 @@ public class ShiHand : MonoBehaviour
             return;
 
         // TODO:
-        // 物件包含 hand physics 功能
+        // 物件包含 Gravity 功能
         //m_CurrentInteractable.GetComponent<Rigidbody>().isKinematic = false;
         //m_CurrentInteractable.GetComponent<Rigidbody>().useGravity = true;
 

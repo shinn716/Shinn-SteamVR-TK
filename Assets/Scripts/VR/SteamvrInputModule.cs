@@ -9,10 +9,13 @@ using Valve.VR;
 
 public class SteamvrInputModule : VR_InputModule
 {
+    public static SteamvrInputModule instance;
+
     public ShiHand[] shiHands;
 
     protected override void Awake()
     {
+        instance = this;
         shiHands = FindObjectsOfType<ShiHand>();
     }
 
