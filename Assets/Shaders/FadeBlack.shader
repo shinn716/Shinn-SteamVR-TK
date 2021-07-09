@@ -4,7 +4,7 @@ Shader "Custom/FadeBlack"
 {
 	Properties
 	{
-		_Fade("Fade", Float) = 0.5
+		_Fade("Float with range", Range(0.0, 1.0)) = 0.5
 	}
 		SubShader
 	{

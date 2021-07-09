@@ -15,10 +15,10 @@ public class Config : MonoBehaviour
     private string toggleEnableVRTitle = string.Empty;
 
     private GUIStyle guiStyle = new GUIStyle(); //create a new variable
-    
+
     private float m_showFps = 0;
     private float nextActionTime = 0;
-    
+
     private enum Toggle1Status
     {
         MODE_VR,
@@ -29,7 +29,7 @@ public class Config : MonoBehaviour
     {
         LoadData();
         DisableHMD(toggleDisableHMD);
-        
+
         Valve.VR.InteractionSystem.Player.instance.allowToggleTo2D = enablePlayerDebugMode;
     }
 
@@ -86,12 +86,18 @@ public class Config : MonoBehaviour
             var player = Valve.VR.InteractionSystem.Player.instance;
             player.SendMessage("ActivateRig", player.rig2DFallback);
             toggleEnableVRTitle = Toggle1Status.MODE_STANDALONE.ToString();
+
+            var snapTurn = FindObjectOfType<Valve.VR.InteractionSystem.SnapTurn>();
+            snapTurn.enabled = false;
         }
         else
         {
             var player = Valve.VR.InteractionSystem.Player.instance;
             player.SendMessage("ActivateRig", player.rigSteamVR);
             toggleEnableVRTitle = Toggle1Status.MODE_VR.ToString();
+
+            var snapTurn = FindObjectOfType<Valve.VR.InteractionSystem.SnapTurn>();
+            snapTurn.enabled = true;
         }
     }
 
@@ -109,7 +115,7 @@ public class Config : MonoBehaviour
 
         toggleDisableHMD = flag1;
         toggleEnableFPS = flag2;
-        
+
         print("====Load prefs===");
         print("toggleDisableHMD " + toggleDisableHMD);
         print("toggleEnableFPS " + toggleEnableFPS);

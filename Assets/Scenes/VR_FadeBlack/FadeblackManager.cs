@@ -8,7 +8,7 @@ public class FadeblackManager : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        screenFade = new ScreenFade();
+        screenFade = new ScreenFade("fadeblack/start");
         screenFade.FadeIn(1);
         yield return new WaitForSeconds(1);
         screenFade.FadeOut(1);

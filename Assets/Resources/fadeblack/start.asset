@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5019b72d1bf501742a81d452f263d283, type: 3}
-  m_Name: FadeBlack
+  m_Name: start
   m_EditorClassIdentifier: 
   loadingUI: {fileID: 6328955896409509132, guid: 6eb5c420303d96a45b4aadcdef77cab9,
     type: 3}

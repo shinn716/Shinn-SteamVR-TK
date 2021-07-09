@@ -13,10 +13,10 @@ public class ScreenFade : MonoBehaviour
     private float m_value;
     private float alpha = 1;
 
-    public ScreenFade(float talpha = .7f, bool enableText = true)
+    public ScreenFade(string fadeblackObjUrlFromResources, float talpha = .7f)
     {
         alpha = talpha;
-        var screenFadeObject = Resources.Load<ScreenFadeObject>("Materials/FadeBlack");
+        var screenFadeObject = Resources.Load<ScreenFadeObject>(fadeblackObjUrlFromResources);
         var mat = screenFadeObject.materialFadeBlack;
 
         m_mesh = new Mesh();
@@ -46,7 +46,7 @@ public class ScreenFade : MonoBehaviour
         m_materialFadeID = Shader.PropertyToID("_Fade");
         m_materialInstance.SetFloat(m_materialFadeID, 0);
 
-        if (!enableText)
+        if (screenFadeObject.loadingUI == null)
             return;
 
         var hint = Instantiate(screenFadeObject.loadingUI);
@@ -56,16 +56,16 @@ public class ScreenFade : MonoBehaviour
         hint.transform.localScale = Vector3.one * 0.0003f;
     }
 
-    public void FadeIn(float during)
+    public void FadeIn(float during_second, Ease ease = Ease.OutSine)
     {
-        DOTween.To(() => m_value, x => m_value = x, alpha, during).SetEase(Ease.OutSine).OnUpdate(() =>
+        DOTween.To(() => m_value, x => m_value = x, alpha, during_second).SetEase(ease).OnUpdate(() =>
         m_materialInstance.SetFloat(m_materialFadeID, m_value)
         );
     }
 
-    public void FadeOut(float during)
+    public void FadeOut(float during_second, Ease ease = Ease.OutSine)
     {
-        DOTween.To(() => m_value, x => m_value = x, 0, during).SetEase(Ease.OutSine).OnUpdate(() =>
+        DOTween.To(() => m_value, x => m_value = x, 0, during_second).SetEase(ease).OnUpdate(() =>
         m_materialInstance.SetFloat(m_materialFadeID, m_value)
         );
     }
