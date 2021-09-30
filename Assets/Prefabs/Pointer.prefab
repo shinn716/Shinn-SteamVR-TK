@@ -208,9 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastCam: {fileID: -3540287988368962071}
-  m_DefaultLength: 5
   m_Dot: {fileID: 2093577868}
-  inputModule: {fileID: 0}
+  m_DefaultLength: 5
 --- !u!20 &-3540287988368962071
 Camera:
   m_ObjectHideFlags: 0
@@ -246,7 +245,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
+  m_TargetEye: 0
   m_HDR: 0
   m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
